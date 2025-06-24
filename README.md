@@ -23,7 +23,7 @@ A simple, responsive product listing application built with **Next.js** and **Ta
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/product-listing-app.git
+git clone https://github.com/ritesh7092/Product-Listing-App.git
 cd product-listing-app
 ```
 
