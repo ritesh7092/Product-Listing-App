@@ -129,7 +129,16 @@ export default function ProductDetailsClient({ product }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {related.map(p => (
               <div key={p.id} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-               
+                <div className="h-32 bg-gray-100 flex items-center justify-center">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="w-full h-full object-cover"
+                    onError={e => {
+                      e.target.src = `https://via.placeholder.com/400x400/6B7280/FFFFFF?text=${encodeURIComponent(p.name)}`;
+                    }}
+                  />
+                </div>
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-900 mb-2">
                     {p.name}
